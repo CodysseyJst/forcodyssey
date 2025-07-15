@@ -10,10 +10,19 @@ if __name__ == '__main__':
     def power_calculator(a, b):    
         result = 1
         i = 0
-        while i < b:
-            result = result * a
-            i += 1
-        return result
+        if 0 < b:
+            while i < b:
+                result *= a
+                i += 1
+            return result
+        elif 0 > b:
+            b = abs(b)
+            while i < b:
+                result *= a
+                i += 1
+            return 1/result
+        else:
+            return result
 
     while True:
         try:
